@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ManagerEmployeeNeoCharacter.Models.Neo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.N)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.O)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.N)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.O)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NeoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NeoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NeoID })
+        </td>
+    </tr>
+}
+
+</table>

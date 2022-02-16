@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerEmployeeNeoCharacter", "ManagerEmployeeNeoCharacter\ManagerEmployeeNeoCharacter.csproj", "{024C71E7-9601-4A11-BD1E-95A8091C16B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{024C71E7-9601-4A11-BD1E-95A8091C16B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024C71E7-9601-4A11-BD1E-95A8091C16B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024C71E7-9601-4A11-BD1E-95A8091C16B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024C71E7-9601-4A11-BD1E-95A8091C16B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

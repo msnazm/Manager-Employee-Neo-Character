@@ -1,0 +1,116 @@
+﻿@model ManagerEmployeeNeoCharacter.Models.Employee
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstMidName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstMidName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EnetrDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EnetrDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NameFather)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NameFather)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BirthDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BirthDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BirthCertificateNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BirthCertificateNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NationalCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NationalCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomeTell)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomeTell)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MobileTell)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MobileTell)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomeAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomeAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OfficeAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OfficeAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TheCompanyJobs)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TheCompanyJobs)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Province)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Province)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FullName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FullName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

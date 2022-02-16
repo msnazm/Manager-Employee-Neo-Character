@@ -1,0 +1,136 @@
+﻿@model ManagerEmployeeNeoCharacter.Models.Employee
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Employee</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstMidName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstMidName)
+            @Html.ValidationMessageFor(model => model.FirstMidName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EnetrDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EnetrDate)
+            @Html.ValidationMessageFor(model => model.EnetrDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NameFather)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NameFather)
+            @Html.ValidationMessageFor(model => model.NameFather)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BirthDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BirthDate)
+            @Html.ValidationMessageFor(model => model.BirthDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BirthCertificateNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BirthCertificateNumber)
+            @Html.ValidationMessageFor(model => model.BirthCertificateNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NationalCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NationalCode)
+            @Html.ValidationMessageFor(model => model.NationalCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeTell)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeTell)
+            @Html.ValidationMessageFor(model => model.HomeTell)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MobileTell)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MobileTell)
+            @Html.ValidationMessageFor(model => model.MobileTell)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeAddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeAddress)
+            @Html.ValidationMessageFor(model => model.HomeAddress)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OfficeAddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OfficeAddress)
+            @Html.ValidationMessageFor(model => model.OfficeAddress)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TheCompanyJobs)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TheCompanyJobs)
+            @Html.ValidationMessageFor(model => model.TheCompanyJobs)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Province)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Province)
+            @Html.ValidationMessageFor(model => model.Province)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval", "~/Scripts/jquery.ui.core.min.js", "~/Scripts/jquery.ui.datepicker.min.js", "~/Scripts/DatePickerReady.js")
+    @Styles.Render("~/Content/themes/base/jquery.ui.core.css", "~/Content/themes/base/jquery.ui.datepicker.css", "~/Content/themes/base/jquery.ui.theme.css")
+}

@@ -1,0 +1,60 @@
+﻿@model ManagerEmployeeNeoCharacter.Models.Neo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Neo</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.N)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.N)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.O)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.O)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.E)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.E)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.A)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.A)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.C)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.C)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmployeeID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmployeeID)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,69 @@
+﻿@model PagedList.IPagedList<ManagerEmployeeNeoCharacter.Models.Employee>
+@using PagedList.Mvc; 
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "نمایش آزمون دهنده گان";
+}
+
+<h2>اطلاعات افراد تست گرفته شده</h2>
+
+<p>
+    @Html.ActionLink("جدید", "Create")
+</p>
+@using (Html.BeginForm("Index", "ManagerEmployeeNeoCharacter", FormMethod.Get))
+{
+    <p>
+        جستجو نام خانوادگی: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)  
+        <input type="submit" value="جستجو" />
+    </p>
+}
+
+
+<table>
+    <tr>
+        <th>
+        @Html.ActionLink("نام خانوادگی و نام", "Index", new { sortOrder=ViewBag.NameSortParm, currentFilter=ViewBag.CurrentFilter })
+        </th>
+      @* <th>
+        @Html.ActionLink("نام پدر", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>*@
+        <th>
+        @Html.ActionLink("تاریخ مراجعه", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+       <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+       @* <td>
+            @Html.DisplayFor(modelItem => item.NameFather)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.EnetrDate)
+        </td>
+        
+        <td>
+            @Html.ActionLink("اصلاح", "Edit", new { id=item.EmployeeID }) |
+            @Html.ActionLink("نمایش", "Details", new { id=item.EmployeeID }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.EmployeeID }) |
+            @Html.ActionLink("آزمون Neo", "Create", "Neo",new { id=item.EmployeeID }, null) |
+            @Html.ActionLink("اصلاح آزمون Neo", "Edit", "Neo", new { id = item.EmployeeID }, null) |
+            @Html.ActionLink("نمایش آزمون Neo", "Details", "Neo", new { id = item.EmployeeID }, null) |
+            @Html.ActionLink("آزمون شخصیت", "Create", "Character",new { id=item.EmployeeID }, null) |
+            @Html.ActionLink("اصلاح آزمون شخصیت", "Edit", "Character",new { id=item.EmployeeID }, null) |
+            @Html.ActionLink("نمایش آزمون شخصیت", "Details", "Character",new { id=item.EmployeeID }, null)
+            @Html.ActionLink("report", "ReportManage", "Reports",new { id=item.EmployeeID }, null)
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+صفحه @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) از @Model.PageCount
+
+@Html.PagedListPager( Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter=ViewBag.CurrentFilter }) )
+

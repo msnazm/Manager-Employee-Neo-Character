@@ -1,0 +1,36 @@
+﻿@model ManagerEmployeeNeoCharacter.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstMidName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstMidName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EnrollmentDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EnrollmentDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.EmployeeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

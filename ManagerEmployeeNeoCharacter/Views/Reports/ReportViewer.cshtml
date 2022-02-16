@@ -1,0 +1,47 @@
+﻿@model ManagerEmployeeNeoCharacter.Models.SearchParameterModel
+
+@{
+    ViewBag.Title = "لیست پرسنل";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+</script>
+<hgroup class="title">
+    <h1>@ViewBag.Title</h1>
+</hgroup>
+
+<section id="ReportViewer">
+    <h4>لیست پرسنل</h4>
+    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+
+        <fieldset>
+            <legend>Report 1</legend>
+            <ol>
+                <li>
+                    @Html.LabelFor(m => m.LastName)
+                    @Html.TextBoxFor(m => m.LastName)
+                    @Html.ValidationMessageFor(m => m.LastName)
+                </li>
+            </ol>
+            <input type="submit" id="btnSubmit" value="View Report" />
+        </fieldset>
+    }
+</section>
+@if (Model != null)
+{
+    <section class="social" id="ReportDisplayPanel">
+        <h4>Report Viewer Section.</h4>
+        @Html.ActionLink("View Report in PDF Format", "GenerateAndDisplayReport", new { LastName = Model.LastName, format = "pdf" })
+        @Html.ActionLink("Download Report in PDF Format", "DownloadReport", new { LastName = Model.LastName, format = "pdf" })
+        <img src="@Url.Action("GenerateAndDisplayReport", "Report", new { LastName = Model.LastName, format = Model.Format })"   />
+    </section>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

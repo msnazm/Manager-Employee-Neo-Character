@@ -1,0 +1,57 @@
+﻿@model ManagerEmployeeNeoCharacter.Models.Character
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Character</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.A)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.A)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.B)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.B)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.G)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.G)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.D)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.D)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.H)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.H)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Employee.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Employee.LastName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CharacterID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
